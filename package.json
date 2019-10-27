@@ -1,0 +1,30 @@
+{
+  "name": "mean-stack",
+  "version": "1.0.0",
+  "description": "Project using Mean stack",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-Gibbons/MEAN-Stack.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "Angular",
+    "Node"
+  ],
+  "author": "Michael Gibbons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michael-Gibbons/MEAN-Stack/issues"
+  },
+  "homepage": "https://github.com/Michael-Gibbons/MEAN-Stack#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "morgan": "^1.9.1"
+  }
+}
