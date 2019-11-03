@@ -8,12 +8,14 @@ var userSchema = new Schema({
   email: {type: String, required:true, lowercase: true, unique: true }
 });
 
-userSchema.pre("save", (next)=>{
+userSchema.pre("save", function(next){
   var user = this;
-  bcrypt.hash(user.password, null, null, (err, hash)=>{
-    if(err){return next(err);}
-    user.password = hash;
-    next();
+  bcrypt.genSalt(10,(err,salt) => {
+    bcrypt.hash(user.password, salt, function(err, hash){
+      if(err){return next(err);}
+      user.password = hash;
+      next();
+    });
   });
   
 });
