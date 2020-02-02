@@ -7,6 +7,8 @@ var keys =       require("./config/keys");
 var bodyParser = require("body-parser");
 var appRoutes =  require("./app/routes/api")(router);
 var path =       require("path");
+var passport =   require("passport");
+var social =     require("./app/passport/passport");
 
 
 var port = process.env.PORT || 8000;

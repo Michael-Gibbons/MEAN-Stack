@@ -10,7 +10,8 @@ angular.module("appRoutes", ["ngRoute"])
   .when("/register", {
     templateUrl: "app/views/pages/users/register.html",
     controller: "regCtrl",
-    controllerAs: "register"
+    controllerAs: "register",
+    authenticated: false
   })
 
   .when("/login",{
@@ -23,6 +24,16 @@ angular.module("appRoutes", ["ngRoute"])
 
   .when('/profile', {
     templateUrl: "app/views/pages/users/profile.html"
+  })
+  .when('/facebook:token', {
+    templateUrl: "app/views/pages/users/social/social.html",
+    controller: "facebookCtrl",
+    controllerAs: "facebook"
+  })
+  .when('/facebookerror', {
+    templateUrl: "app/views/pages/users/login.html",
+    controller: "facebookCtrl",
+    controllerAs: "facebook"
   })
 
   .otherwise({redirectTo: "/"});
